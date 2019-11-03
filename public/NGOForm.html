@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>NGO Registration form</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="NGO_css/main.css" rel="stylesheet" media="all">
+</head>
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">NGO Registration Form</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/addNgo" method="POST">
+                        <div class="form-row">
+                            <div class="name">Name of the NGO</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name = "ngoname">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                                <div class="name">Email address</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="form-row">
+                            <div class="name">State</div>
+                            <div class="value">
+                               <select name="NGOLocation">
+                                <option value="">Select State</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Orissa">Orissa</option>
+                                <option value="Pondicherry">Pondicherry</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttaranchal">Uttaranchal</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="West Bengal">West Bengal</option>
+                                </select>
+                                <div class="input-group">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Address</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="ngoaddress">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Phone Number</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="ngophone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Issues you work with</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <select name="NGOIssues">
+                                        <option value="">Issues</option>
+                                        <option value="Domestic Abuse">Domestic Abuse</option>
+                                        <option value="Dowry Harassment">Dowry Harassment</option>
+                                        <option value="Others">Others</option>
+                                        <option vlaue="All">All</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-row">
+                            <div class="name">Registration Certificate</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <label class="label--file" for="file">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                                <div class="label--desc">Upload a copy of your government registration certificate.</div>
+                            </div>
+                        </div> -->
+                        <div class="card-footer">
+                                <button name="submit" class="btn btn--radius-2 btn--blue-2" type="submit"> Register </button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="NGO_vendor/jquery/jquery.min.js"></script>
+    <script src="NGO_js/global.js"></script>
+    <script>
+    var phone = document.getElementById("ngophone");
+    var address = document.getElementById("ngoaddress");
+    var name = document.getElementById("ngoname");
+    function NGOData(){
+        alert("Request Submitted");
+    }
+    </script>
+</body>
+</html>
