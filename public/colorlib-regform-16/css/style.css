@@ -618,4 +618,24 @@ input.error {
     -o-flex-direction: column;
     -ms-flex-direction: column; } }
 
+    .card-6 .card-footer {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 50px 55px;
+}
+
+@media (max-width: 767px) {
+  .card-6 .card-footer {
+    padding: 50px 30px;
+  }
+}
+
+
 /*# sourceMappingURL=style.css.map */
