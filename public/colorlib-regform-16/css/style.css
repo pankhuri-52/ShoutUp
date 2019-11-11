@@ -618,7 +618,7 @@ input.error {
     -o-flex-direction: column;
     -ms-flex-direction: column; } }
 
-    .card-6 .card-footer {
+  /*  .card-6 .card-footer {
   background: #fff;
   border: 1px solid #e5e5e5;
   border-top: none;
@@ -635,7 +635,7 @@ input.error {
   .card-6 .card-footer {
     padding: 50px 30px;
   }
-}
+}*/
 
 
 /*# sourceMappingURL=style.css.map */
