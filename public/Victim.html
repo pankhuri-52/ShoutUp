@@ -1,212 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Victim Registeration Form</title>
 
-<head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="html_forms/fonts/material-icon/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="html_forms/vendor/nouislider/nouislider.min.css">
 
-    <!-- Title Page-->
-    <title>Victim Registeration</title>
+        <!-- Main css -->
+        <link rel="stylesheet" href="html_forms/css/style.css">
+    </head>
+    <body style="height: 200%; width: 100%;background-image: url('images/victim.jpeg');background-repeat: no-repeat;background-size: 100% 100%;">
+        <div class="main">
+            <div class="container" style="height: 200%; width: 100%;background-image: url('images/victim.jpeg');background-repeat: no-repeat;background-size: 100% 100%;">
+                <div class="col-md-4">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="form-input">
+                                        <label for="first_name" class="required">Full Name<font color="white"></font></label>
+                                        <input type="text" name="first_name" id="first_name" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="gender" class="required"><font color="white">Gender</font></label>
+                                        <input type="text" name="gender" id="gender" />
+                                    </div> 
+                                    <div class="form-input">
+                                        <label for="age" class="required">Age<font color="white"></font></label>
+                                        <input type="text" name="age" id="age" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="contactno" class="required"><font color="white">Contact Number</font></label>
+                                        <input type="text" name="contactno" id="contactno" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="email" class="required">Email<font color="white"></font></label>
+                                        <input type="text" name="email" id="email" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="address" class="required"><font color="white">Address</font></label>
+                                        <input type="text" name="address" id="address" rows="5" cols="55" />
+                                    </div>
 
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+                                    <div class="form-input">
+                                        <label for="description" class="required"><font color="white">Description</font></label>
+                                        <input type="text" name="description" id="description" rows="5" cols="115" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-select">
+                                        <div class="label-flex">
+                                            <label for="meal_preference">State</label>
+                                            <a href="#" class="form-link"></a>
+                                        </div>
+                                        <div class="select-list">
+                                            <select name="meal_preference" id="meal_preference">
+                                                <option value="">Select State</option>
+                                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chandigarh">Chandigarh</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                                <option value="Daman and Diu">Daman and Diu</option>
+                                                <option value="Delhi">Delhi</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Lakshadweep">Lakshadweep</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Orissa">Orissa</option>
+                                                <option value="Pondicherry">Pondicherry</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttaranchal">Uttaranchal</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-radio">
+                                        <div class="label-flex">
+                                            <label for="issue">Issue Facing</label>
+                                            <a href="#" class="form-link"></a>
+                                        </div>
+                                        <div class="form-radio-group">            
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="abuse" id="abuse">
+                                                <label for="abuse">Domestic Abuse</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="dowry" id="dowry">
+                                                <label for="dowry">Dowry Harrasment</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="death" id="death">
+                                                <label for="death">Death Threats</label>
+                                                <span class="check"></span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-    <!-- Main CSS-->
-    <link href="css/forms/main.css" rel="stylesheet" media="all">
-</head>
-<body style="background-image: url('images/F1.jpg');"> 
-    <div>
-        <div class="wrapper wrapper--w900">
-            <div class="card card-6">
-                <div class="card-heading">
-                    <h3 style="color:white;"><i>&ldquo; <b>The more that we choose not to talk about domestic violence, the more we shy away from the issue, the more we lose.</b>&rdquo;</i></h3>
-                    <br>
-                    <h2 class="title">Victim Details Form</h2>
-                </div>
-                <div class="card-body">
-                    <form action="/addVictim" method="POST">
-                        <div class="form-row">
-                            <div class="name" style="font-family: 'Comic Sans MS', cursive, sans-serif;font-size: 30px;">Full name</div>
-                            <div class="value">
-                                <input class="input--style-6" type="text" name="victimName">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Gender</div>
-                            <div class="value">
-                                <select name="gender">
-								  <option>Male</option>
-								  <option>Female</option>
-								  <option>Other</option>
-								</select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Age</div>
-                            <div class="value">
-                            	<div class="input-group">
-                                	<input class="input--style-6" type="text" name="age">
+                                    <div class="form-radio">
+                                        <div class="label-flex">
+                                            <label for="payment">Is it still happening?</label>
+                                            <a href="#" class="form-link"></a>
+                                        </div>
+                                        <div class="form-radio-group">            
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="Yes" id="Yes">
+                                                <label for="Yes">Yes</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="No" id="No">
+                                                <label for="No">No</label>
+                                                <span class="check"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-radio">
+                                        <div class="label-flex">
+                                            <label for="extent">Extent of Abuse</label>
+                                            <a href="#" class="form-link"></a>
+                                        </div>
+                                        <div class="form-radio-group">            
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="started" id="started">
+                                                <label for="started">Just Started</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="Intermediate" id="Intermediate">
+                                                <label for="Intermediate">Intermediate</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="high" id="high">
+                                                <label for="high">High</label>
+                                                <span class="check"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="criminal">Criminal Name</label>
+                                        <input type="text" name="chequeno" id="chequeno" />
+                                    </div>
+                                    
+                                    <div class="form-radio">
+                                        <div class="label-flex">
+                                            <label for="relation">Relation with Criminal</label>
+                                            <a href="#" class="form-link"></a>
+                                        </div>
+                                        <div class="form-radio-group">            
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="father" id="father">
+                                                <label for="father">Father-in-law</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="mother" id="mother">
+                                                <label for="mother">Mother-in-law</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="other" id="other">
+                                                <label for="other">Other</label>
+                                                <span class="check"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-submit" style="float: left; margin-left: 0%;"> 
+                                                <button type="submit" value="Submit" class="submit" id="submit" name="submit">Submit</button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Contact Number</div>
-                            <div class="value">
-                            	<div class="input-group">
-                                	<input class="input--style-6" type="text" name="phone">
-                                </div>
-                            </div>
-                        </div>                        
-                        <div class="form-row">
-                            <div class="name">Email address</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">State</div>
-                            <div class="value">
-                               <select name="location">
-                                <option value="">Select State</option>
-                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                <option value="Assam">Assam</option>
-                                <option value="Bihar">Bihar</option>
-                                <option value="Chandigarh">Chandigarh</option>
-                                <option value="Chhattisgarh">Chhattisgarh</option>
-                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                                <option value="Daman and Diu">Daman and Diu</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Goa">Goa</option>
-                                <option value="Gujarat">Gujarat</option>
-                                <option value="Haryana">Haryana</option>
-                                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                <option value="Jharkhand">Jharkhand</option>
-                                <option value="Karnataka">Karnataka</option>
-                                <option value="Kerala">Kerala</option>
-                                <option value="Lakshadweep">Lakshadweep</option>
-                                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                <option value="Maharashtra">Maharashtra</option>
-                                <option value="Manipur">Manipur</option>
-                                <option value="Meghalaya">Meghalaya</option>
-                                <option value="Mizoram">Mizoram</option>
-                                <option value="Nagaland">Nagaland</option>
-                                <option value="Orissa">Orissa</option>
-                                <option value="Pondicherry">Pondicherry</option>
-                                <option value="Punjab">Punjab</option>
-                                <option value="Rajasthan">Rajasthan</option>
-                                <option value="Sikkim">Sikkim</option>
-                                <option value="Tamil Nadu">Tamil Nadu</option>
-                                <option value="Tripura">Tripura</option>
-                                <option value="Uttaranchal">Uttaranchal</option>
-                                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                <option value="West Bengal">West Bengal</option>
-                                </select>
-                                <div class="input-group">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Address</div>
-                            <div class="value">
-                                    <input class="input--style-6" type="text" name="address">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Issue facing</div>
-                            <div class="value">
-                                <select name="issue">
-                                    <option>Select</option>
-								  <option>Domestic Abuse</option>
-								  <option>Dowry Harrasment</option>
-								  <option>Death Threats</option>\
-								  <option>Others</option>
-								</select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Is it still happening</div>
-                            <div class="value">
-                                <select name="status">
-                                    <option>Choose</option>
-								  <option>Yes </option>
-								  <option>NO</option>
-								</select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Extent of Abuse</div>
-                            <div class="value">
-                                <select name = "extent">
-                                    <option>Select</option>
-                                	<option>Just Started</option>
-                                	<option>Intermediate</option>
-                                	<option>High</option>
-                                	<option>Intolerably High</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Criminal name</div>
-                            <div class="value">
-                                <input class="input--style-6" type="text" name="criminal_name">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Relation with criminal</div>
-                            <div class="value">
-                                <select name = "criminal_relation">
-                                	<option>Father-In-Law</option>
-                                	<option>Mother-In-Law</option>
-                                	<option>In-Laws</option>
-                                	<option>Other Relatives</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="name">Description</div>
-                            <div class="value">
-                            	<textarea class="textarea--style-6" name="description" placeholder="Feel Comfortable in Telling"></textarea>
-                            </div>
-                        </div>
-                        <!-- <div class="form-row">
-                            <div class="name">Upload Proof(If Any)</div>
-                            <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
-                                    <label class="label--file" for="file">Choose file</label>
-                                    <span class="input-file__info">No file chosen</span>
-                                </div>
-                                <div class="label--desc">Upload any other relevant file. Max file size 10 MB</div>
-                            </div>
-                        </div> -->
-                        <div class="card-footer">
-                            <button onclick = "VictimData()" class="btn btn--radius-2 btn--blue-2" type="submit">Report</button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/forms/global.js"></script>
-    <script type="text/javascript">
-        function VictimData(){
-            alert("Report Submitted");
-        }
-    </script>
-</body>
+        <!-- JS -->
+        <script src="html_forms/vendor/jquery/jquery.min.js"></script>
+        <script src="html_forms/vendor/nouislider/nouislider.min.js"></script>
+        <script src="html_forms/vendor/wnumb/wNumb.js"></script>
+        <script src="html_forms/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="html_forms/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+        <script src="html_forms/js/main.js"></script>
+    </body>
 </html>

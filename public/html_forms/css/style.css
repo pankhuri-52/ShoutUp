@@ -231,7 +231,7 @@ body {
    }
 
 .signup-form {
-  width: 1015px;
+  width: 1000px;
   margin-top: -2px; }
 
 .signup-img-content {
@@ -247,6 +247,8 @@ body {
   width: 100%; }
 
 .register-form {
+  margin-left: 20%;
+  margin-right: -20%;
   padding: 93px 115px 90px 80px;
   margin-bottom: -8px; }
 
@@ -287,7 +289,7 @@ input {
   font-size: 14px;
   font-family: 'Poppins'; }
   input:focus {
-    border: 1px solid #329e5e; }
+    border: 1px solid #D9534F; }
 
 .label-flex {
   justify-content: space-between;
@@ -505,7 +507,9 @@ li.init {
   text-align: right; }
 
 .submit {
-  width: 150px;
+  margin-top: 20%;
+  margin-left: 155%;
+  width: 130px;
   height: 50px;
   display: inline-block;
   font-family: 'Poppins';
@@ -531,11 +535,11 @@ li.init {
     color: #fff; }
 
 #submit {
-  background: #329e5e;
+  background: #D9534F;
   color: #fff;
   margin-right: 25px; }
   #submit:hover {
-    background-color: #267747; }
+    background-color: #D9534F; }
 
 .form-input {
   position: relative; }
@@ -618,7 +622,7 @@ input.error {
     -o-flex-direction: column;
     -ms-flex-direction: column; } }
 
-  /*  .card-6 .card-footer {
+    .card-6 .card-footer {
   background: #fff;
   border: 1px solid #e5e5e5;
   border-top: none;
@@ -635,7 +639,7 @@ input.error {
   .card-6 .card-footer {
     padding: 50px 30px;
   }
-}*/
+}
 
 
 /*# sourceMappingURL=style.css.map */

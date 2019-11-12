@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Report As A Friend</title>
+
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="html_forms/fonts/material-icon/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="html_forms/vendor/nouislider/nouislider.min.css">
+
+        <!-- Main css -->
+        <link rel="stylesheet" href="html_forms/css/style.css">
+
+    </head>
+    <body style="height: 100%; width: 100%;background-image: url('Rf.jpg');background-repeat: no-repeat;background-size: 100% 100%;"">
+        <div class="main">
+            <div class="container" style="height: 200%; width: 100%;background-image: url('Rf.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
+                <div class="signup-content">
+                    <!-- <div class="signup-img">
+                        <img src="html_forms/images/stop2.jpg" alt="">
+                        <img src="images/Rf.jpg" alt="" style="padding: 10px;">
+                    </div> -->
+                    <div class="signup-form">
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="form-input">
+                                        <label for="full_name" class="required"><font color="white">Your Full Name</font></label>
+                                        <input type="text" name="full_name" id="full_name" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="age" class="required"><font color="white">Your Age</font></label>
+                                        <input type="text" name="age" id="age" />
+                                    </div> 
+                                    <div class="form-input">
+                                        <label for="contactno" class="required"><font color="white">Contact No.</font></label>
+                                        <input type="text" name="contactno" id="contactno" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="email" class="required"><font color="white">Your Email Address</font></label>
+                                        <input type="text" name="email" id="email" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="address" class="required"><font color="white">Your Address</font></label>
+                                        <input type="text" name="address" id="address" rows="5" cols="55" /></input>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-select">
+                                        <div class="form-input">
+                                        <label for="vctim_name" class="required"><font color="white">Victim's Full Name</font></label>
+                                        <input type="text" name="victim_name" id="victim_name" />
+                                    </div>
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="victim_number"><font color="white">Victim's Contact Number</font></label>
+                                        <input type="text" name="victim_number" id="victim_number" />
+                                    </div>
+                                    <div class="form-radio">
+                                        <div class="label-flex">
+                                            <label for="payment"><font color="white">Relationship with Victim</font></label>
+                                            <a href="#" class="form-link"></a>
+                                        </div>
+                                        <div class="form-radio-group">            
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="neighbour" id="neighbour">
+                                                <label for="neighbour"><font color="white">Neighbour</font></label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="friend" id="friend">
+                                                <label for="friend"><font color="white">Friend</font></label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="relative" id="relative">
+                                                <label for="relative"><font color="white">Relative</font></label>
+                                                <span class="check"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="description" class="required"><font color="white">Description</font></label>
+                                        <input type="text" name="description" id="description" rows="5" cols="55" /></input>
+                                    </div>
+                                    <div class="form-submit" style="float: left; margin-left: 0%;"> 
+                                            <button type="submit" value="Submit" class="submit" id="submit" name="submit">Submit</button>
+                                    </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JS -->
+        <script src="html_forms/vendor/jquery/jquery.min.js"></script>
+        <script src="html_forms/vendor/nouislider/nouislider.min.js"></script>
+        <script src="html_forms/vendor/wnumb/wNumb.js"></script>
+        <script src="html_forms/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="html_forms/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+        <script src="html_forms/js/main.js"></script>
+    </body>
+</html>
