@@ -27,40 +27,42 @@ mongoose.connection.on('connected',(err) => {
  })
 
  var ngoSchema = new mongoose.Schema({
-    ngoname: String,
+    nGOName: String,
+    filingPersonName: String,
     email: String,
-    NGOLocation: String,
-    ngoaddress: String,
-    ngophone: String,
-    NGOIssues: String,
+    address: String,
+    newstate: String,
+    employement: String,
+    experience: String,
+    contactno: String,
 })
  
 var VictimSchema = new mongoose.Schema({
-  victimName: String,
+  victim_name: String,
   gender: String,
   age: String,
-  phone: String,
+  contactno: String,
   email: String,
-  location: String,
   address: String,
-  issue: String,
-  status: String,
-  extent: String,
-  criminal_name: String,
-  criminal_relation: String,
   description: String,
+  state: String,
+  issueFacing: String,
+  abuse_status: String,
+  extent_abuse: String,
+  criminalName: String,
+  relationWithCriminal: String,
 })
 
 var ReportAsAFriendSchema = new mongoose.Schema({
-  rf_name: String,
-  rf_age: String,
-  rf_phone: String,
-  rf_email: String,
-  rf_address: String,
-  rf_victim_name: String,
-  rf_victim_phone: String,
-  rf_victim_relationship: String,
-  rf_description: String,
+  rfName: String,
+  age: String,
+  contactno: String,
+  email: String,
+  address: String,
+  victim_name: String,
+  victim_number: String,
+  relationshipWithVictim: String,
+  description: String,
 })
 
 var ngo = mongoose.model('ngo', ngoSchema);
@@ -70,6 +72,7 @@ var reporter = mongoose.model('friendreport',ReportAsAFriendSchema);
 app.post('/addNgo',function(req,res)
 {
   var obj = req.body;
+  console.log(obj);
   ngo.create(obj,function(error,result)
   {
     if(error)
@@ -89,7 +92,7 @@ app.post('/addVictim',function(req,res)
     throw err;
     else
     {
-      ngo.find({ NGOLocation : obj.location}).then(data => {console.log(data)});
+      ngo.find({ state : obj.state}).then(data => {console.log(data)});
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })

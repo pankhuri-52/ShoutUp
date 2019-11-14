@@ -13,23 +13,23 @@
         <!-- Main css -->
         <link rel="stylesheet" href="html_forms/css/style.css">
     </head>
-    <body>
-         <h3 style="color:white;font-size:35px;"><center><i>&ldquo;Use the darkness of your past to propel you to a brighter future.&rdquo;</i></center></h3>
+    <body style="height: 200%; width: 100%;background-image: url('ngo.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
+        <h3 style="color:black;text-shadow:2px 2px white;font-size:35px;"><center><i>&ldquo;Use the darkness of your past to propel you to a brighter future.&rdquo;</i></center></h3>
         <div class="main">
             <div class="container" style="height: 200%; width: 100%;background-image: url('ngo.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
                 <div class="col-md-4">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <form method="POST" class="register-form" id="register-form">
+                        <form method="POST" action="/addNgo" class="register-form" id="register-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <div class="form-input">
-                                        <label for="first_name" class="required">NGO's Name<font color="white" > </font></label>
-                                        <input type="text" name="first_name" id="first_name" />
+                                        <label for="nGOName" class="required">NGO's Name<font color="white" > </font></label>
+                                        <input type="text" name="nGOName" id="nGOName" />
                                     </div>
                                     <div class="form-input">
-                                        <label for="gender" class="required"><font color="white">Your Name</font></label>
-                                        <input type="text" name="gender" id="gender" />
+                                        <label for="filingPersonName" class="required"><font color="white">Your Name</font></label>
+                                        <input type="text" name="filingPersonName" id="filingPersonName" />
                                     </div>
                                     <div class="form-input">
                                             <label for="email" class="required">Email<font color="white"></font></label>
@@ -43,11 +43,11 @@
                                 <div class="form-group">
                                     <div class="form-select">
                                         <div class="label-flex">
-                                            <label for="meal_preference"><font color="white">State</font></label>
+                                            <label for="state" class="required"><font color="white">State</font></label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="select-list">
-                                            <select name="meal_preference" id="meal_preference">
+                                            <select name="state" id="state">
                                                 <option value=""><font color="white">Select State</font></option>
                                                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -90,17 +90,17 @@
 
                                     <div class="form-radio">
                                         <div class="label-flex">
-                                            <label for="payment"><font color="white">Will you provide </font>employement opportunities?</label>
+                                            <label for="employement" class="required"><font color="white">Will you provide </font>employement opportunities?</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                                <input type="radio" name="yes" id="yes">
+                                                <input type="radio" name="employement" id="yes">
                                                 <label for="yes"><font color="white">Yes</font></label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="no" id="no">
+                                                <input type="radio" name="employement" id="no">
                                                 <label for="no"><font color="white">No</font></label>
                                                 <span class="check"></span>
                                             </div>
@@ -108,8 +108,8 @@
                                     </div>
                                     <div class="form-radio">
                                             <div class="form-input">
-                                                <label for="age" class="required"><font color="white" >Working Since</font></label>
-                                                <input type="text" name="age" id="age" />
+                                                <label for="experience" class="required"><font color="white" >Working Since</font></label>
+                                                <input type="text" name="experience" id="experience" />
                                             </div>
                                     </div>
                                     <div class="form-input">

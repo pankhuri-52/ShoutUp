@@ -14,25 +14,29 @@
         <link rel="stylesheet" href="html_forms/css/style.css">
 
     </head>
-    <body style="height: 100%; width: 100%;background-image: url('Rf.jpg');background-repeat: no-repeat;background-size: 100%;line-height:2pt;">
-         <h3 style="color:white;font-size:35px;"><center><i>&ldquo;You own your life and help others to own theirs&rdquo;</i></center></h3>
+    <body style="height: 100%; width: 100%;background-image: url('Rf.jpg');background-repeat: no-repeat;background-size: 100% 100%;line-height:2pt;">
+        <h3 style="color:white;font-size:35px;"><center><i>&ldquo;You own your life and help others to own theirs&rdquo;</i></center></h3>
         <div class="main">
             <div class="container" style="height: 200%; width: 100%;background-image: url('Rf.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
                 <div class="signup-content">
+                    <!-- <div class="signup-img">
+                        <img src="html_forms/images/stop2.jpg" alt="">
+                        <img src="images/Rf.jpg" alt="" style="padding: 10px;">
+                    </div> -->
                     <div class="signup-form">
-                        <form method="POST" class="register-form" id="register-form">
+                        <form method="POST" action="/Rf" class="register-form" id="register-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <div class="form-input">
-                                        <label for="full_name" class="required"><font color="white">Your Full Name</font></label>
-                                        <input type="text" name="full_name" id="full_name" />
+                                        <label for="rfName" class="required"><font color="white">Your Full Name</font></label>
+                                        <input type="text" name="rfName" id="rfName" />
                                     </div>
                                     <div class="form-input">
                                         <label for="age" class="required"><font color="white">Your Age</font></label>
                                         <input type="text" name="age" id="age" />
                                     </div> 
                                     <div class="form-input">
-                                        <label for="contactno" class="required"><font color="white">Contact No.</font></label>
+                                        <label for="contactno" class="required"><font color="white">Your Contact No.</font></label>
                                         <input type="text" name="contactno" id="contactno" />
                                     </div>
                                     <div class="form-input">
@@ -52,27 +56,27 @@
                                     </div>
                                     </div>
                                     <div class="form-input">
-                                        <label for="victim_number"><font color="white">Victim's Contact Number</font></label>
+                                        <label for="victim_number" class="required"><font color="white">Victim's Contact Number</font></label>
                                         <input type="text" name="victim_number" id="victim_number" />
                                     </div>
                                     <div class="form-radio">
                                         <div class="label-flex">
-                                            <label for="payment"><font color="white">Relationship with Victim</font></label>
+                                            <label for="relationshipWithVictim" class="required"><font color="white">Relationship with Victim</font></label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                                <input type="radio" name="neighbour" id="neighbour">
+                                                <input type="radio" name="relationshipWithVictim" id="neighbour">
                                                 <label for="neighbour"><font color="white">Neighbour</font></label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="friend" id="friend">
+                                                <input type="radio" name="relationshipWithVictim" id="friend">
                                                 <label for="friend"><font color="white">Friend</font></label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="relative" id="relative">
+                                                <input type="radio" name="relationshipWithVictim" id="relative">
                                                 <label for="relative"><font color="white">Relative</font></label>
                                                 <span class="check"></span>
                                             </div>

@@ -1,24 +1,23 @@
 (function($) {
 
-  $('#meal_preference').parent().append('<ul class="list-item" id="newmeal_preference" name="meal_preference"></ul>');
-  $('#meal_preference option').each(function(){
-      $('#newmeal_preference').append('<li value="' + $(this).val() + '">'+$(this).text()+'</li>');
+  $('#state').parent().append('<ul class="list-item" id="newstate" name="state"></ul>');
+  $('#state option').each(function(){
+      $('#newstate').append('<li value="' + $(this).val() + '">'+$(this).text()+'</li>');
   });
-  $('#meal_preference').remove();
-  $('#newmeal_preference').attr('id', 'meal_preference');
-  $('#meal_preference li').first().addClass('init');
-  $("#meal_preference").on("click", ".init", function() {
-      $(this).closest("#meal_preference").children('li:not(.init)').toggle();
+  $('#state').remove();
+  $('#newstate').attr('id', 'state');
+  $('#state li').first().addClass('init');
+  $("#state").on("click", ".init", function() {
+      $(this).closest("#state").children('li:not(.init)').toggle();
   });
   
-  var allOptions = $("#meal_preference").children('li:not(.init)');
-  $("#meal_preference").on("click", "li:not(.init)", function() {
+  var allOptions = $("#state").children('li:not(.init)');
+  $("#state").on("click", "li:not(.init)", function() {
       allOptions.removeClass('selected');
       $(this).addClass('selected');
-      $("#meal_preference").children('.init').html($(this).html());
+      $("#state").children('.init').html($(this).html());
       allOptions.toggle();
   });
-
 // (function($) {
 
 //   $('#gender').parent().append('<ul class="list-item" id="newgender" name="gender"></ul>');
