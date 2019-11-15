@@ -1,10 +1,10 @@
 require('dotenv').config()
-var express = require('express')
+var express = require('express')                //necessary modules required
 var path = require('path')
 var app = express()
 var nodemailer = require('nodemailer');
 
-
+//body parser and database connectivity
 app.use(express.static(path.join(__dirname,'public')));
 
 app.use(express.urlencoded({extended: true}));
@@ -29,6 +29,8 @@ mongoose.connection.on('connected',(err) => {
    console.log('DB connected');
  })
 
+ //Schemas Defined
+ //NGO Schema
  var ngoSchema = new mongoose.Schema({
     nGOName: String,
     filingPersonName: String,
@@ -39,7 +41,7 @@ mongoose.connection.on('connected',(err) => {
     experience: String,
     contactno: String,
 })
- 
+ //Victim Schema
 var VictimSchema = new mongoose.Schema({
   victim_name: String,
   gender: String,
@@ -55,7 +57,7 @@ var VictimSchema = new mongoose.Schema({
   criminalName: String,
   relationWithCriminal: String,
 })
-
+//RF Schema
 var ReportAsAFriendSchema = new mongoose.Schema({
   rfName: String,
   age: String,
@@ -72,7 +74,7 @@ var ngo = mongoose.model('ngo', ngoSchema);
 var victim = mongoose.model('victims',VictimSchema);
 var reporter = mongoose.model('friendreport',ReportAsAFriendSchema);
 
-app.post('/addNgo',function(req,res)
+app.post('/addNgo',function(req,res)      //Add NGO Request 
 {
   var obj = req.body;
   console.log(obj);
@@ -86,7 +88,7 @@ app.post('/addNgo',function(req,res)
     })
 })
 
-app.post('/addVictim',function(req,res)
+app.post('/addVictim',function(req,res)     //Add Victim Request
 {
   var obj = req.body;
   victim.create(obj,function(error,result)
@@ -100,7 +102,7 @@ app.post('/addVictim',function(req,res)
     })
 })
 
-app.post('/Rf',function(req,res)
+app.post('/Rf',function(req,res)      //Friend Report Request
 {
   var obj = req.body;
   reporter.create(obj,function(error,result)
@@ -113,7 +115,7 @@ app.post('/Rf',function(req,res)
     })
 })
 
-app.post('/mail',function(req,res)
+app.post('/mail',function(req,res)        //mail function
 {
   var obj = req.body;
   var transporter = nodemailer.createTransport({

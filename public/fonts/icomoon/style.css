@@ -485,6 +485,7 @@
 }
 .icon-phone:before {
   content: "\f095";
+  color: black;
 }
 .icon-square-o:before {
   content: "\f096";
@@ -3797,6 +3798,7 @@
 }
 .icon-room:before {
   content: "\e8b4";
+  color: black;
 }
 .icon-lock_open:before {
   content: "\e898";
@@ -3839,6 +3841,7 @@
 }
 .icon-mail_outline:before {
   content: "\e0e1";
+  color: black;
 }
 .icon-map2:before {
   content: "\e55b";

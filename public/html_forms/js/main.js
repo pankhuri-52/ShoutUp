@@ -18,26 +18,6 @@
       $("#state").children('.init').html($(this).html());
       allOptions.toggle();
   });
-// (function($) {
-
-//   $('#gender').parent().append('<ul class="list-item" id="newgender" name="gender"></ul>');
-//   $('#gender option').each(function(){
-//       $('#newgender').append('<li value="' + $(this).val() + '">'+$(this).text()+'</li>');
-//   });
-//   $('#gender').remove();
-//   $('#newgender').attr('id', 'gender');
-//   $('#gender li').first().addClass('init');
-//   $("#gender").on("click", ".init", function() {
-//       $(this).closest("#gender").children('li:not(.init)').toggle();
-//   });
-  
-//   var allOptions = $("#gender").children('li:not(.init)');
-//   $("#gender").on("click", "li:not(.init)", function() {
-//       allOptions.removeClass('selected');
-//       $(this).addClass('selected');
-//       $("#gender").children('.init').html($(this).html());
-//       allOptions.toggle();
-//   });
 
   var marginSlider = document.getElementById('slider-margin');
   if (marginSlider != undefined) {
@@ -89,9 +69,6 @@
             required: true,
         },
         victim_number : {
-            required: true,
-        },
-        relationshipWithVictim : {
             required: true,
         },
         nGOName : {
