@@ -1,6 +1,9 @@
+require('dotenv').config()
 var express = require('express')
 var path = require('path')
 var app = express()
+var nodemailer = require('nodemailer');
+
 
 app.use(express.static(path.join(__dirname,'public')));
 
@@ -31,7 +34,7 @@ mongoose.connection.on('connected',(err) => {
     filingPersonName: String,
     email: String,
     address: String,
-    newstate: String,
+    ngostate: String,
     employement: String,
     experience: String,
     contactno: String,
@@ -108,6 +111,34 @@ app.post('/Rf',function(req,res)
     {
       res.sendFile(path.join(__dirname + '/public/Victim.html'));  }
     })
+})
+
+app.post('/mail',function(req,res)
+{
+  var obj = req.body;
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD
+    }
+  });
+
+  var mailOptions = {
+    from: 'hack7jack@gmail.com',
+    to: 'hack7jack@gmail.com',
+    subject: 'Domestic Violence Contact Form',
+    text: "You have got a contact request from: " + req.body.username + "\n" + " From SHOUTUP\nThe First Name is: " + req.body.firstName + "\n" + " Last Name is: " + req.body.lastName + "\nThe subject is: " + req.body.subject + "\nThe message is: " + req.body.message
+  };
+
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.res);
+      res.sendFile(path.join(__dirname + '/public/index.html'));
+    }
+  });
 })
 
 //Server Running Confirmation

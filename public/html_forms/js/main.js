@@ -1,6 +1,6 @@
 (function($) {
 
-  $('#state').parent().append('<ul class="list-item" id="newstate" name="state"></ul>');
+  $('#state').parent().append('<ul class="list-item" id="newstate"></ul>');
   $('#state option').each(function(){
       $('#newstate').append('<li value="' + $(this).val() + '">'+$(this).text()+'</li>');
   });
@@ -63,20 +63,44 @@
 
   $('#register-form').validate({
     rules : {
-        first_name : {
+        victim_name : {
             required: true,
         },
-        last_name : {
+        age : {
             required: true,
         },
-        company : {
+        contactno : {
+            required: true,
+        },
+        address : {
             required: true
         },
         email : {
             required: true,
             email : true
         },
-        phone_number : {
+        description : {
+            required: true,
+        },
+        criminalName : {
+            required: true,
+        },
+        rfName : {
+            required: true,
+        },
+        victim_number : {
+            required: true,
+        },
+        relationshipWithVictim : {
+            required: true,
+        },
+        nGOName : {
+            required: true,
+        },
+        filingPersonName : {
+            required: true,
+        },
+        experience : {
             required: true,
         }
     },

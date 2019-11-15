@@ -12,45 +12,52 @@
 
         <!-- Main css -->
         <link rel="stylesheet" href="html_forms/css/style.css">
+        
+        
     </head>
-    <body style="margin-top: -30px;height: 200%; width: 100%;background-image: url('ngo.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
-        <h3 style="color:black;text-shadow:2px 2px white;font-size:35px;"><center><i>&ldquo;Use the darkness of your past to propel you to a brighter future.&rdquo;</i></center></h3>
+    <body>
         <div class="main">
-            <div class="container" style="height: 200%; width: 100%;background-image: url('ngo.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
-                <div class="col-md-4">
+            <div class="container">
                 <div class="signup-content">
+                        <div class="signup-img">
+                            <img src="images/rep.jpg" alt="">
+                            <div class="signup-img-content">
+                                <h2>Register now </h2>
+                                <p>while seats are available !</p>
+                            </div>
+                        </div>
                     <div class="signup-form">
                         <form method="POST" action="/addNgo" class="register-form" id="register-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <div class="form-input">
-                                        <label for="nGOName" class="required"><font style="color:#2396C7;text-shadow: 1px 1px black;">NGO's Name</font></label>
+                                        <label for="nGOName" class="required">NGO's Name</label>
                                         <input type="text" name="nGOName" id="nGOName" />
                                     </div>
                                     <div class="form-input">
-                                        <label for="filingPersonName" class="required"><font  style="color:#2396C7;text-shadow: 1px 1px black;">Your Name</font></label>
+                                        <label for="filingPersonName" class="required">Your Name</label>
                                         <input type="text" name="filingPersonName" id="filingPersonName" />
                                     </div>
                                     <div class="form-input">
-                                            <label for="email" class="required"><font  style="color:#2396C7;text-shadow: 1px 1px black;">Email</font></label>
+                                            <label for="email" class="required">Email></label>
                                             <input type="text" name="email" id="email" />
                                         </div>
                                     <div class="form-input">
-                                        <label for="address" class="required"><font  style="color:#2396C7;text-shadow: 1px 1px black;">Address</font></label>
+                                        <label for="address" class="required">Address</label>
                                         <input type="text" name="address" id="address" rows="5" cols="55" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-select">
                                         <div class="label-flex">
-                                            <label for="state" class="required"><font  style="color:#2396C7;text-shadow: 1px 1px black;">State</font></label>
+                                            <label for="state" class="required">State</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="select-list">
                                             <select name="state" id="state">
-                                                <option value=""><font color="white">Select State</font></option>
-                                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="">Select State</option>
+                                                <option  value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                <option  value="Andhra Pradesh">Andhra Pradesh</option>
                                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                                                 <option value="Assam">Assam</option>
                                                 <option value="Bihar">Bihar</option>
@@ -58,7 +65,7 @@
                                                 <option value="Chhattisgarh">Chhattisgarh</option>
                                                 <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
                                                 <option value="Daman and Diu">Daman and Diu</option>
-                                                <option value="Delhi">Delhi</option>
+                                                <option  value="Delhi" selected="true">Delhi</option>
                                                 <option value="Goa">Goa</option>
                                                 <option value="Gujarat">Gujarat</option>
                                                 <option value="Haryana">Haryana</option>
@@ -90,34 +97,35 @@
 
                                     <div class="form-radio">
                                         <div class="label-flex">
-                                            <label for="employement" class="required"><font  style="color:#2396C7;text-shadow: 1px 1px black;">Will you provide employement opportunities?</font></label>
+                                            <label for="employement" class="required">Will you provide employement opportunities?</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                                <input type="radio" name="employement" id="yes">
-                                                <label for="yes"><font color="white">Yes</font></label>
+                                                <input type="radio" name="employement" value="Yes" id="yes">
+                                                <label for="yes">Yes</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="employement" id="no">
-                                                <label for="no"><font color="white">No</font></label>
+                                                <input type="radio" name="employement" value="No" id="no">
+                                                <label for="no">No</label>
                                                 <span class="check"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-radio">
                                             <div class="form-input">
-                                                <label for="experience" class="required"><font  style="color:#2396C7;text-shadow: 1px 1px black;">Working Since</font></label>
+                                                <label for="experience" class="required">Working Since</label>
                                                 <input type="text" name="experience" id="experience" />
                                             </div>
                                     </div>
                                     <div class="form-input">
-                                            <label for="contactno" class="required"><font  style="color:#2396C7;text-shadow: 1px 1px black;">Contact Number</font></label>
+                                            <label for="contactno" class="required">Contact Number</label>
                                             <input type="text" name="contactno" id="contactno" />
                                     </div>
-                                    <div class="form-submit" style="float: left; margin-left: 0%;"> 
-                                            <button type="submit" value="Submit" class="submit" id="submit" name="submit"><font color="white">Submit</font></button>
+                                    <div class="form-submit">
+                                        <button type="submit" value="Submit" class="submit" id="submit" name="submit">Submit</button>
+                                        <button type="submit" value="Reset" class="submit" id="reset" name="reset">Reset</button>
                                     </div>
                                 </div>
                             </div>

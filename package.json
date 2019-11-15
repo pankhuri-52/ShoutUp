@@ -1,0 +1,27 @@
+{
+  "name": "domesticviolence",
+  "version": "1.0.0",
+  "description": "This is a simple yet a powerful website made during a Hackathon. It is for the victims of Domestic Abuse. NGOs which are ready to help such people are connected with this website. When the victims fills the details, the website finds a suitable nearby NGO for him/her. Appropriate action is taken against the criminal by the NGO.",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.5",
+    "nodemailer": "^6.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitin-1926/ShoutOut.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitin-1926/ShoutOut/issues"
+  },
+  "homepage": "https://github.com/nitin-1926/ShoutOut#readme"
+}

@@ -14,80 +14,83 @@
         <link rel="stylesheet" href="html_forms/css/style.css">
 
     </head>
-    <body style="margin-top: -75px;height: 100%; width: 100%;background-image: url('Rf.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
-        <h3 style="color:white;font-size:35px;"><center><i>&ldquo;You own your life and help others to own theirs&rdquo;</i></center></h3>
+    <body>
         <div class="main">
-            <div class="container" style="height: 200%; width: 100%;background-image: url('Rf.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
+            <div class="container">
                 <div class="signup-content">
-                    <!-- <div class="signup-img">
-                        <img src="html_forms/images/stop2.jpg" alt="">
-                        <img src="images/Rf.jpg" alt="" style="padding: 10px;">
-                    </div> -->
+                        <div class="signup-img">
+                                <img src="images/rep.jpg" alt="">
+                                <div class="signup-img-content">
+                                    <h2>Register now </h2>
+                                    <p>while seats are available !</p>
+                                </div>
+                        </div>
                     <div class="signup-form">
                         <form method="POST" action="/Rf" class="register-form" id="register-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <div class="form-input">
-                                        <label for="rfName" class="required"><font style="color:white;text-shadow: 1px 1px black;">Your Full Name</font></label>
+                                        <label for="rfName" class="required">Your Full Name</label>
                                         <input type="text" name="rfName" id="rfName" />
                                     </div>
                                     <div class="form-input">
-                                        <label for="age" class="required"><font style="color:white;text-shadow: 1px 1px black;">Your Age</font></label>
+                                        <label for="age" class="required">Your Age</label>
                                         <input type="text" name="age" id="age" />
                                     </div> 
                                     <div class="form-input">
-                                        <label for="contactno" class="required"><font style="color:white;text-shadow: 1px 1px black;">Your Contact No.</font></label>
+                                        <label for="contactno" class="required">Your Contact No.</label>
                                         <input type="text" name="contactno" id="contactno" />
                                     </div>
                                     <div class="form-input">
-                                        <label for="email" class="required"><font style="color:white;text-shadow: 1px 1px black;">Your Email Address</font></label>
+                                        <label for="email" class="required">Your Email Address</label>
                                         <input type="text" name="email" id="email" />
                                     </div>
                                     <div class="form-input">
-                                        <label for="address" class="required"><font style="color:white;text-shadow: 1px 1px black;">Your Address</font></label>
+                                        <label for="address" class="required">Your Address</label>
                                         <input type="text" name="address" id="address" rows="5" cols="55" /></input>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-select">
                                         <div class="form-input">
-                                        <label for="vctim_name" class="required"><font style="color:white;text-shadow: 1px 1px black;">Victim's Full Name</font></label>
+                                        <label for="vctim_name" class="required">Victim's Full Name</label>
                                         <input type="text" name="victim_name" id="victim_name" />
                                     </div>
                                     </div>
                                     <div class="form-input">
-                                        <label for="victim_number" class="required"><font style="color:white;text-shadow: 1px 1px black;">Victim's Contact Number</font></label>
+                                        <label for="victim_number" class="required">Victim's Contact Number</label>
                                         <input type="text" name="victim_number" id="victim_number" />
                                     </div>
                                     <div class="form-radio">
                                         <div class="label-flex">
-                                            <label for="relationshipWithVictim" class="required"><font style="color:white;text-shadow: 1px 1px black;">Relationship with Victim</font></label>
+                                            <label for="relationshipWithVictim" class="required">Relationship with Victim</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                                <input type="radio" name="relationshipWithVictim" id="neighbour">
-                                                <label for="neighbour"><font color="white">Neighbour</font></label>
+                                                <input type="radio" name="relationshipWithVictim" value="Neighbour" id="neighbour">
+                                                <label for="neighbour">Neighbour</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="relationshipWithVictim" id="friend">
-                                                <label for="friend"><font color="white">Friend</font></label>
+                                                <input type="radio" name="relationshipWithVictim" value="Friend" id="friend">
+                                                <label for="friend">Friend</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="relationshipWithVictim" id="relative">
-                                                <label for="relative"><font color="white">Relative</font></label>
+                                                <input type="radio" name="relationshipWithVictim" value="Relative" id="relative">
+                                                <label for="relative">Relative</label>
                                                 <span class="check"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-input">
-                                        <label for="description" class="required"><font style="color:white;text-shadow: 1px 1px black;">Description</font></label>
+                                        <label for="description" class="required">Description</label>
                                         <input type="text" name="description" id="description" rows="5" cols="55" /></input>
                                     </div>
-                                    <div class="form-submit" style="float: left; margin-left: 0%;"> 
+                                    <div class="form-submit">
                                             <button type="submit" value="Submit" class="submit" id="submit" name="submit">Submit</button>
+                                            <button type="submit" value="Reset" class="submit" id="reset" name="reset">Reset</button>
                                     </div>
                             </div>
                         </form>

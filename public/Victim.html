@@ -13,67 +13,72 @@
         <!-- Main css -->
         <link rel="stylesheet" href="html_forms/css/style.css">
     </head>
-    <body style="height: 200%; width: 100%;background-image: url('images/victim.jpeg');background-repeat: no-repeat;background-size: 100% 100%">
-        <h3 style="margin-top: -25px;color:white;font-size:35px;"><center><i>&ldquo;No one can help you if you are not willing to help yourself&rdquo;</i></center></h3>
+    <body>
         <div class="main">
-            <div class="container" style="height: 200%; width: 100%;background-image: url('images/victim.jpeg');background-repeat: no-repeat;background-size: 100% 100%;">
-                <div class="col-md-4">
+            <div class="container">
                 <div class="signup-content">
+                        <div class="signup-img">
+                                <img src="images/rep.jpg" alt="" style="height: 85%">
+                                <div class="signup-img-content">
+                                    <h2>Register now </h2>
+                                    <p>while seats are available !</p>
+                                </div>
+                        </div>
                     <div class="signup-form">
                         <form method="POST" action="/addVictim" class="register-form" id="register-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <div class="form-input">
-                                        <label for="victim_name" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Full Name</font></label>
+                                        <label for="victim_name" class="required">Full Name</label>
                                         <input type="text" name="victim_name" id="victim_name" />
                                     </div>
                                     <div class="label-flex">
-                                        <label for="gender" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Gender</font></label>
+                                        <label for="gender" class="required">Gender</label>
                                         <a href="#" class="form-link"></a>
                                     </div>
                                     <div class="form-radio-group">            
                                         <div class="form-radio-item">
-                                            <input type="radio" name="gender" id="Male">
-                                            <label for="Male"><font color="white">Male</font></label>
+                                            <input type="radio" name="gender" value="Male" id="Male">
+                                            <label for="Male">Male</label>
                                             <span class="check"></span>
                                         </div>
                                         <div class="form-radio-item">
-                                            <input type="radio" name="gender" id="Female">
-                                            <label for="Female"><font color="white">Female</font></label>
+                                            <input type="radio" name="gender" value="Female" id="Female">
+                                            <label for="Female">Female</label>
                                             <span class="check"></span>
                                         </div>
                                         <div class="form-radio-item">
-                                            <input type="radio" name="gender" id="Others">
-                                            <label for="Others"><font color="white">Others</font></label>
+                                            <input type="radio" name="gender" value="Others" id="Others">
+                                            <label for="Others">Others</label>
                                             <span class="check"></span>
                                         </div>
                                     </div>
                                     <div class="form-input">
-                                        <label for="age" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Age</font></label>
+                                        <label for="age" class="required">Age</label>
                                         <input type="text" name="age" id="age" />
                                     </div>
                                     <div class="form-input">
-                                        <label for="contactno" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Contact Number</font></label>
+                                        <label for="contactno" class="required">Contact Number</label>
                                         <input type="text" name="contactno" id="contactno" />
                                     </div>
                                     <div class="form-input">
-                                        <label for="email" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Email</font></label>
+                                        <label for="email" class="required">Email</label>
                                         <input type="text" name="email" id="email" />
                                     </div>
                                     <div class="form-input">
-                                        <label for="address" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Address</font></label>
+                                        <label for="address" class="required">Address</label>
                                         <input type="text" name="address" id="address" rows="5" cols="55" />
                                     </div>
 
                                     <div class="form-input">
-                                        <label for="description" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Description</font></label>
+                                        <label for="description" class="required">Description</label>
                                         <input type="text" name="description" id="description" rows="5" cols="115" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-select">
                                         <div class="label-flex">
-                                            <label for="state" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">State</font></label>
+                                            <label for="state" class="required">State</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="select-list">
@@ -119,22 +124,22 @@
                                     </div>
                                     <div class="form-radio">
                                         <div class="label-flex">
-                                            <label for="issueFacing" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Issue Facing</font></label>
+                                            <label for="issueFacing" class="required">Issue Facing</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                                <input type="radio" name="issueFacing" id="abuse">
+                                                <input type="radio" name="issueFacing" value="Domestic Abuse" id="abuse">
                                                 <label for="abuse">Domestic Abuse</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="issueFacing" id="dowry">
+                                                <input type="radio" name="issueFacing" value="Dowry Harrasment" id="dowry">
                                                 <label for="dowry">Dowry Harrasment</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="issueFacing" id="death">
+                                                <input type="radio" name="issueFacing" value="Death Threats" id="death">
                                                 <label for="death">Death Threats</label>
                                                 <span class="check"></span>
                                             </div>
@@ -143,17 +148,17 @@
 
                                     <div class="form-radio">
                                         <div class="label-flex">
-                                            <label for="abuse_status" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Is it still happening?</font></label>
+                                            <label for="abuse_status" class="required">Is it still happening?</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                                <input type="radio" name="abuse_status" id="Yes">
+                                                <input type="radio" name="abuse_status" value="Yes" id="Yes">
                                                 <label for="Yes">Yes</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="abuse_status" id="No">
+                                                <input type="radio" name="abuse_status" value="No" id="No">
                                                 <label for="No">No</label>
                                                 <span class="check"></span>
                                             </div>
@@ -162,56 +167,57 @@
 
                                     <div class="form-radio">
                                         <div class="label-flex">
-                                            <label for="extent_abuse" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Extent of Abuse</font></label>
+                                            <label for="extent_abuse" class="required">Extent of Abuse</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                                <input type="radio" name="extent_abuse" id="started">
+                                                <input type="radio" name="extent_abuse" value="Just Started" id="started">
                                                 <label for="started">Just Started</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="extent_abuse" id="Intermediate">
+                                                <input type="radio" name="extent_abuse" value="Intermediate" id="Intermediate">
                                                 <label for="Intermediate">Intermediate</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="extent_abuse" id="high">
+                                                <input type="radio" name="extent_abuse" value="High" id="high">
                                                 <label for="high">High</label>
                                                 <span class="check"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-input">
-                                        <label for="criminalName" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Criminal Name</font></label>
+                                        <label for="criminalName" class="required">Criminal Name</label>
                                         <input type="text" name="criminalName" id="criminalName" />
                                     </div>
                                     
                                     <div class="form-radio">
                                         <div class="label-flex">
-                                            <label for="relationWithCriminal" class="required"><font style="color:#d3145a;text-shadow: 1px 1px white;">Relation with Criminal</font></label>
+                                            <label for="relationWithCriminal" id="relationWithCriminal" class="required">Relation with Criminal</label>
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                                <input type="radio" name="relationWithCriminal" id="father">
+                                                <input type="radio" name="relationWithCriminal" value="Father-in-Law" id="father">
                                                 <label for="father">Father-in-law</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="relationWithCriminal" id="mother">
+                                                <input type="radio" name="relationWithCriminal" value="Mother-In-Law" id="mother">
                                                 <label for="mother">Mother-in-law</label>
                                                 <span class="check"></span>
                                             </div>
                                             <div class="form-radio-item">
-                                                <input type="radio" name="relationWithCriminal" id="other">
+                                                <input type="radio" name="relationWithCriminal" value="Others" id="other">
                                                 <label for="other">Other</label>
                                                 <span class="check"></span>
                                             </div>
                                         </div>
-                                        <div class="form-submit" style="float: left; margin-left: 0%;"> 
-                                                <button type="submit" value="Submit" class="submit" id="submit" name="submit">Submit</button>
+                                        <div class="form-submit">
+                                            <button type="submit" value="Submit" class="submit" id="submit" name="submit">Submit</button>
+                                            <button type="submit" value="Reset" class="submit" id="reset" name="reset">Reset</button>
                                         </div>
                                     </div>
                                 </div>
