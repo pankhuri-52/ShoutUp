@@ -4,10 +4,14 @@
   "description": "This is a simple yet a powerful website made during a Hackathon. It is for the victims of Domestic Abuse. NGOs which are ready to help such people are connected with this website. When the victims fills the details, the website finds a suitable nearby NGO for him/her. Appropriate action is taken against the criminal by the NGO.",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
     "mongoose": "^5.7.5",
-    "nodemailer": "^6.3.1"
+    "nodemailer": "^6.4.6",
+    "nodemailer-mailgun-transport": "^2.0.0",
+    "save": "^2.4.0"
   },
   "devDependencies": {},
   "scripts": {

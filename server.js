@@ -1,16 +1,20 @@
-require('dotenv').config()
-var express = require('express')                //necessary modules required
-var path = require('path')
-var app = express()
+require('dotenv').config();
+var express = require('express') //necessary modules required
+const bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
 var nodemailer = require('nodemailer');
+var path = require('path')
+
+var app = express();
+
 
 //body parser and database connectivity
 app.use(express.static(path.join(__dirname,'public')));
 
-app.use(express.urlencoded({extended: true}));
-app.use(express.json());
+app.use(express.urlencoded({extended: true})); //If extended is false, you can not post "nested object"
+app.use(express.json()); //incoming request as a json object
 
-  app.use(function (req, res, next) {
+  app.use(function (req, res, next) { //middleware function that have access to request,response and next obj
     next()
   })
 
@@ -115,33 +119,33 @@ app.post('/Rf',function(req,res)      //Friend Report Request
     })
 })
 
-app.post('/mail',function(req,res)        //mail function
-{
+app.post('/mail',function(req,res){
   var obj = req.body;
-  var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD
-    }
+  console.log('Hello');
+  let transporter = nodemailer.createTransport({
+      service :'gmail',
+      auth : {
+      user : process.env.EMAIL,
+        pass : process.env.PASSWORD
+      }
   });
 
-  var mailOptions = {
-    from: 'hack7jack@gmail.com',
-    to: 'hack7jack@gmail.com',
-    subject: 'Domestic Violence Contact Form',
-    text: "You have got a contact request from: " + req.body.username + "\n" + " From SHOUTUP\nThe First Name is: " + req.body.firstName + "\n" + " Last Name is: " + req.body.lastName + "\nThe subject is: " + req.body.subject + "\nThe message is: " + req.body.message
+  let mailOptions = {
+      from : 'hack7jack@gmail.com',
+      to : 'hack7jack@gmail.com',
+      subject : 'Shoutup Contact Request',
+      text : "You have got a contact request from: " + obj.username + "\n" + " From SHOUTUP\nThe First Name is: " + obj.firstName + "\n" + " Last Name is: " + obj.lastName + "\nThe subject is: " + obj.subject + "\nThe message is: " + obj.message
   };
-
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.res);
-      res.sendFile(path.join(__dirname + '/public/index.html'));
-    }
+  // console.log(mailOptions);
+  transporter.sendMail(mailOptions,function(err,data){
+      if (err) {
+        console.log('Error Occurs');
+      } else {
+         console.log('Email sent!!');
+         res.sendFile(path.join(__dirname + '/public/index.html'));
+      }
   });
-})
+});
 
 //Server Running Confirmation
 app.listen(3000,function()
