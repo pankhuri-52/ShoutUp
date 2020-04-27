@@ -129,10 +129,10 @@ app.post('/mail',function(req,res){
         pass : process.env.PASSWORD
       }
   });
-
+  
   let mailOptions = {
-      from : 'hack7jack@gmail.com',
-      to : 'hack7jack@gmail.com',
+      from : 'shoutup1617@gmail.com',
+      to : 'shoutup1617@gmail.com',
       subject : 'Shoutup Contact Request',
       text : "You have got a contact request from: " + obj.username + "\n" + " From SHOUTUP\nThe First Name is: " + obj.firstName + "\n" + " Last Name is: " + obj.lastName + "\nThe subject is: " + obj.subject + "\nThe message is: " + obj.message
   };
