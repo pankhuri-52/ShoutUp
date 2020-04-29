@@ -63,7 +63,7 @@ var VictimSchema = new mongoose.Schema({
   email: String,
   address: String,
   description: String,
-  state: String,
+  statename: String,
   issueFacing: String,
   abuse_status: String,
   extent_abuse: String,
@@ -102,7 +102,6 @@ app.post('/mail',function(req,res){
 app.post('/addNgo',function(req,res)      //Add NGO Request 
 {
   var obj = req.body;
-  console.log(obj);
   ngo.create(obj,function(error,result)
   {
     if(error)
@@ -122,7 +121,7 @@ app.post('/addVictim',function(req,res)     //Add Victim Request
     throw err;
     else
     {
-      ngo.find({ state : obj.state}).then(data => {console.log(data)});
+      //ngo.find({ state : obj.state}).then(data => {console.log(data)});
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
