@@ -34,6 +34,15 @@ mongoose.connection.on('connected',(err) => {
  })
 
  //Schemas Defined
+ //mailing schema
+ var mailSchema = new mongoose.Schema({
+   firstName: String,
+   lastName: String,
+   username: String,
+   subject: String,
+   message: String,
+ })
+
  //NGO Schema
  var ngoSchema = new mongoose.Schema({
     nGOName: String,
@@ -77,6 +86,18 @@ var ReportAsAFriendSchema = new mongoose.Schema({
 var ngo = mongoose.model('ngo', ngoSchema);
 var victim = mongoose.model('victims',VictimSchema);
 var reporter = mongoose.model('friendreport',ReportAsAFriendSchema);
+var mailbox = mongoose.model('mails',mailSchema);
+
+app.post('/mail',function(req,res){
+  var obj=req.body;
+  mailbox.create(obj,function(error,result){
+    if(error)
+      throw err;
+    else{
+      res.sendFile(path.join(__dirname + '/public/index.html'));
+    }
+  })
+})
 
 app.post('/addNgo',function(req,res)      //Add NGO Request 
 {
