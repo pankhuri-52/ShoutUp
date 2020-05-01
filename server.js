@@ -1,9 +1,15 @@
 require('dotenv').config();
 var express = require('express') //necessary modules required
+var router = express.Router();
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 var nodemailer = require('nodemailer');
 var path = require('path')
+var session = require('express-session');
+var multer = require('multer');
+var alert = require('alert-node')
+var fs = require('fs');
+const mongodb = require('mongodb');
 
 var app = express();
 
@@ -49,7 +55,7 @@ mongoose.connection.on('connected',(err) => {
     filingPersonName: String,
     email: String,
     address: String,
-    ngostate: String,
+    statengo: String,
     employement: String,
     experience: String,
     contactno: String,
@@ -101,6 +107,8 @@ app.post('/mail',function(req,res){
 
 app.post('/addNgo',function(req,res)      //Add NGO Request 
 {
+  console.log("ngo vaali post");
+
   var obj = req.body;
   ngo.create(obj,function(error,result)
   {
@@ -135,7 +143,7 @@ app.post('/Rf',function(req,res)      //Friend Report Request
     throw err;
     else
     {
-      res.sendFile(path.join(__dirname + '/public/Victim.html'));  }
+      res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
 
@@ -166,6 +174,33 @@ app.post('/mail',function(req,res){
       }
   });
 });
+
+//image uploading code
+var storage=multer.diskStorage({
+  destination : function(req,file,cb){
+    cb(null,'uploads')
+  },
+    filename : function(req,file,cb){
+      cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+var upload = multer({
+  storage : storage
+})
+// const MongoClient = mongodb.MongoClient;
+// const url='mongodb://localhost:27017';
+app.post('/uploadphoto',upload.single('myImage'),(req,res) => {
+  console.log("Upoad vaali post");
+   var img = fs.readFileSync(req.file.path);
+   var encode_image = img.toString('base64');
+   var finalImg = {
+     contentType : req.file.mimetype,
+     path : req.file.path,
+     image : new Buffer(encode_image,'base64')
+   };
+  // res.send(finalImg);
+})
+
 
 //Server Running Confirmation
 app.listen(3000,function()
