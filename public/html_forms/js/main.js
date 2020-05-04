@@ -99,3 +99,73 @@
         equalTo: ""
     });
 })(jQuery);
+
+function validate() {
+    var x=document.myform.email.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");
+    // name validation
+    if( document.myform.fname.value == "" ) {
+       alert( "Please provide your name!" );
+       document.myform.fname.focus() ;
+       return false;
+    }
+
+      //gender field
+      if ( ( document.myform.gender1.checked == false ) && ( document.myform.gender2.checked == false ) &&
+      (document.myform.gender3.checked == false) ){
+        alert("Please select any gender!");
+        return false;
+    }
+
+     //age validation
+     var ageno=document.myform.age.value;  
+     if (isNaN(ageno) || ageno.length>2 || ageno == ""){  
+     alert("Please enter a valid age!");
+     document.myform.age.focus();
+     return false;  
+     }
+
+     //phone number validation
+    var num=document.myform.contactno.value;  
+    if (isNaN(num) || num.length>10 || num == ""){  
+    alert("Please enter a valid contact number!");
+    document.myform.contactno.focus();
+    return false;  
+    }
+
+    //email validation
+    if( atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length || x=="" ) {
+       alert( "Please enter a valid email address!" );
+       document.myform.email.focus() ;
+       return false;
+    }
+
+     //issue facing validation
+     if ( ( document.myform.issueFacing[0].checked == false ) && ( document.myform.issueFacing[1].checked == false ) &&
+         (document.myform.issueFacing[2].checked == false) ){
+           alert("Please select the issue you are facing!");
+           return false;
+       }
+      
+       //abuse status validation
+    if ( ( document.myform.abuse_status[0].checked == false ) && ( document.myform.abuse_status[1].checked == false )){
+         alert("Please tell us the status of abuse!");
+         return false;
+       }
+
+       //extent of abuse validation
+       if ( ( document.myform.extent_abuse[0].checked == false ) && ( document.myform.extent_abuse[1].checked == false ) &&
+         (document.myform.extent_abuse[2].checked == false) ){
+           alert("Please tell us the extent of abuse!");
+           return false;
+       }
+
+       //relation with abuse validation
+       if ( ( document.myform.relationWithCriminal[0].checked == false ) && ( document.myform.relationWithCriminal[1].checked == false ) &&
+       (document.myform.relationWithCriminal[2].checked == false) ){
+         alert("Please tell us the relation with the criminal!");
+         return false;
+     }
+
+ }

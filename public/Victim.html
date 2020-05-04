@@ -27,12 +27,12 @@
                                 </div>
                         </div>
                     <div class="signup-form">
-                        <form method="POST" action="/addVictim" class="register-form" id="register-form">
+                        <form method="POST" action="/addVictim" class="register-form" id="register-form" name="myform" onsubmit="return validate()">
                             <div class="form-row">
                                 <div class="form-group">
                                     <div class="form-input">
-                                        <label for="victim_name" class="required">Full Name</label>
-                                        <input type="text" name="victim_name" id="victim_name" />
+                                        <label for="fname" class="required">Full Name</label>
+                                        <input type="text" name="fname" id="victim_name" />
                                     </div>
                                     <div class="label-flex">
                                         <label for="gender" class="required">Gender</label>
@@ -40,17 +40,17 @@
                                     </div>
                                     <div class="form-radio-group">            
                                         <div class="form-radio-item">
-                                            <input type="radio" name="gender" value="Male" id="Male">
+                                            <input type="radio" name=gender1 value="Male" id="Male">
                                             <label for="Male">Male</label>
                                             <span class="check"></span>
                                         </div>
                                         <div class="form-radio-item">
-                                            <input type="radio" name="gender" value="Female" id="Female">
+                                            <input type="radio" name=gender2 value="Female" id="Female">
                                             <label for="Female">Female</label>
                                             <span class="check"></span>
                                         </div>
                                         <div class="form-radio-item">
-                                            <input type="radio" name="gender" value="Others" id="Others">
+                                            <input type="radio" name=gender3 value="Others" id="Others">
                                             <label for="Others">Others</label>
                                             <span class="check"></span>
                                         </div>
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="form-input">
                                         <label for="email" class="required">Email</label>
-                                        <input type="text" name="email" id="email" />
+                                        <input type="email" name="email" id="email" />
                                     </div>
                                     <div class="form-input">
                                         <label for="address" class="required">Address</label>
@@ -84,7 +84,7 @@
                                             <a href="#" class="form-link"></a>
                                         </div>
                                         <div class="form-group" style="margin-left: -10%;width:300px;">
-                                            <select class="form-control" name="statename">
+                                            <select class="form-control" name="statename" required>
                                                 <option value="" selected>Select state</option>
                                                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
