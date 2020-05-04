@@ -224,5 +224,45 @@ function validate() {
        alert("Please tell us your relation with the victim!");
        return false;
    }
-    
+ }
+
+ function validateNGO(){
+      //ngo name validation
+    if( document.myform.nGOName.value == "" ) {
+        alert( "Please provide your NGO name!" );
+        document.myform.nGOName.focus() ;
+        return false;
+     }
+
+     //name validation
+    if( document.myform.filingPersonName.value == "" ) {
+        alert( "Please provide your name!" );
+        document.myform.filingPersonName.focus() ;
+        return false;
+     }
+
+     var x=document.myform.email.value;  
+     var atposition=x.indexOf("@");  
+     var dotposition=x.lastIndexOf(".");
+     //email validation
+     if( atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length || x=="" ) {
+        alert( "Please enter a valid email address!" );
+        document.myform.email.focus() ;
+        return false;
+     }
+
+     //employment opportunities
+     if ( ( document.myform.employement[0].checked == false ) && ( document.myform.employement[1].checked == false )){
+       alert("Please tell us whether you will provide employement opportunities!");
+       return false;
+   }
+
+    //phone number validation
+    var num=document.myform.contactno.value;  
+    if (isNaN(num) || num.length>10 || num == ""){  
+    alert("Please enter a valid contact number!");
+    document.myform.contactno.focus();
+    return false;  
+    }
+
  }
