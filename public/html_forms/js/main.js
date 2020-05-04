@@ -136,10 +136,10 @@ function validate() {
 
     //email validation
     if( atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length || x=="" ) {
-       alert( "Please enter a valid email address!" );
-       document.myform.email.focus() ;
-       return false;
-    }
+        alert( "Please enter a valid email address!" );
+        document.myform.email.focus() ;
+        return false;
+     }
 
      //issue facing validation
      if ( ( document.myform.issueFacing[0].checked == false ) && ( document.myform.issueFacing[1].checked == false ) &&
@@ -164,8 +164,65 @@ function validate() {
        //relation with abuse validation
        if ( ( document.myform.relationWithCriminal[0].checked == false ) && ( document.myform.relationWithCriminal[1].checked == false ) &&
        (document.myform.relationWithCriminal[2].checked == false) ){
-         alert("Please tell us the relation with the criminal!");
+         alert("Please tell us your relation with the criminal!");
          return false;
      }
+ }
 
+ function validateRF() {
+      // name validation
+    if( document.myform.fname.value == "" ) {
+        alert( "Please provide your name!" );
+        document.myform.fname.focus() ;
+        return false;
+     }
+
+      //age validation
+      var ageno=document.myform.age.value;  
+      if (isNaN(ageno) || ageno.length>2 || ageno == ""){  
+      alert("Please enter a valid age!");
+      document.myform.age.focus();
+      return false;  
+      }
+
+       //phone number validation
+        var num=document.myform.contactno.value;  
+        if (isNaN(num) || num.length>10 || num == ""){  
+        alert("Please enter a valid contact number!");
+        document.myform.contactno.focus();
+        return false;  
+        }
+
+        var x=document.myform.email.value;  
+        var atposition=x.indexOf("@");  
+        var dotposition=x.lastIndexOf(".");
+        //email validation
+    if( atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length || x=="" ) {
+        alert( "Please enter a valid email address!" );
+        document.myform.email.focus() ;
+        return false;
+     }
+
+     //victim name validation
+        if( document.myform.victim_name.value == "" ) {
+            alert( "Please provide your victim's full name!" );
+            document.myform.victim_name.focus() ;
+            return false;
+         }
+
+     //victim's phone number validation
+        var vnum=document.myform.victim_number.value;  
+        if (isNaN(vnum) || vnum.length>10 || vnum == ""){  
+        alert("Please enter a valid contact number of victim!");
+        document.myform.victim_number.focus();
+        return false;  
+        }
+
+    //relationship with the victim
+     if ( ( document.myform.relationshipWithVictim[0].checked == false ) && ( document.myform.relationshipWithVictim[1].checked == false ) &&
+     (document.myform.relationshipWithVictim[2].checked == false) ){
+       alert("Please tell us your relation with the victim!");
+       return false;
+   }
+    
  }

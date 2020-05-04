@@ -25,12 +25,12 @@
                                 </div>
                         </div>
                     <div class="signup-form">
-                        <form method="POST" action="/Rf" class="register-form" id="register-form">
+                        <form method="POST" action="/Rf" class="register-form" id="register-form" name="myform" onsubmit="return validateRF()">
                             <div class="form-row">
                                 <div class="form-group">
                                     <div class="form-input">
-                                        <label for="rfName" class="required">Your Full Name</label>
-                                        <input type="text" name="rfName" id="rfName" />
+                                        <label for="fname" class="required">Your Full Name</label>
+                                        <input type="text" name="fname" id="rfName" />
                                     </div>
                                     <div class="form-input">
                                         <label for="age" class="required">Your Age</label>
@@ -52,7 +52,7 @@
                                 <div class="form-group">
                                     <div class="form-select">
                                         <div class="form-input">
-                                        <label for="vctim_name" class="required">Victim's Full Name</label>
+                                        <label for="victim_name" class="required">Victim's Full Name</label>
                                         <input type="text" name="victim_name" id="victim_name" />
                                     </div>
                                     </div>
