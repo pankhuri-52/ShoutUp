@@ -107,8 +107,6 @@ app.post('/mail',function(req,res){
 
 app.post('/addNgo',function(req,res)      //Add NGO Request 
 {
-  console.log("ngo vaali post");
-
   var obj = req.body;
   ngo.create(obj,function(error,result)
   {
@@ -129,7 +127,6 @@ app.post('/addVictim',function(req,res)     //Add Victim Request
     throw err;
     else
     {
-      //ngo.find({ state : obj.state}).then(data => {console.log(data)});
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
@@ -149,7 +146,6 @@ app.post('/Rf',function(req,res)      //Friend Report Request
 
 app.post('/mail',function(req,res){
   var obj = req.body;
-  console.log('Hello');
   let transporter = nodemailer.createTransport({
       service :'gmail',
       auth : {
@@ -158,13 +154,13 @@ app.post('/mail',function(req,res){
       }
   });
   
+  
   let mailOptions = {
       from : 'shoutup1617@gmail.com',
       to : 'shoutup1617@gmail.com',
       subject : 'Shoutup Contact Request',
       text : "You have got a contact request from: " + obj.username + "\n" + " From SHOUTUP\nThe First Name is: " + obj.firstName + "\n" + " Last Name is: " + obj.lastName + "\nThe subject is: " + obj.subject + "\nThe message is: " + obj.message
   };
-  // console.log(mailOptions);
   transporter.sendMail(mailOptions,function(err,data){
       if (err) {
         console.log('Error Occurs');
@@ -174,6 +170,7 @@ app.post('/mail',function(req,res){
       }
   });
 });
+
 
 //image uploading code
 var storage=multer.diskStorage({
@@ -187,10 +184,7 @@ var storage=multer.diskStorage({
 var upload = multer({
   storage : storage
 })
-// const MongoClient = mongodb.MongoClient;
-// const url='mongodb://localhost:27017';
 app.post('/uploadphoto',upload.single('myImage'),(req,res) => {
-  console.log("Upoad vaali post");
    var img = fs.readFileSync(req.file.path);
    var encode_image = img.toString('base64');
    var finalImg = {
@@ -198,7 +192,6 @@ app.post('/uploadphoto',upload.single('myImage'),(req,res) => {
      path : req.file.path,
      image : new Buffer(encode_image,'base64')
    };
-  // res.send(finalImg);
 })
 
 
